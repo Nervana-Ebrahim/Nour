@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+body { margin: 0; background: #070b14; color: #f5f7fb; font-family: Arial, "Noto Sans Arabic", Tahoma, sans-serif; }
+::selection { background: rgba(54,120,246,.35); color: white; }
+a { text-decoration: none; }
+button, input, textarea, select { font: inherit; }
+button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible { outline: 2px solid #6fa0ff; outline-offset: 3px; }
+
+.text-muted, .text-muted p { color: #9aa7bc; }
+.text-gradient { background: linear-gradient(100deg, #fff 0%, #8eb6ff 40%, #3678f6 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.hero-grid { isolation: isolate; }
+.hero-grid::before { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none; opacity: .22; background-image: linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px); background-size: 54px 54px; mask-image: linear-gradient(to bottom, black, transparent 88%); }
+.logo-mark { display: grid; width: 39px; height: 39px; place-items: center; border: 1px solid rgba(85,145,255,.4); border-radius: 12px; background: linear-gradient(145deg, rgba(54,120,246,.22), rgba(54,120,246,.04)); color: #fff; font-size: 17px; font-weight: 900; letter-spacing: -3px; }
+.logo-mark span { color: #5e95ff; }
+.logo-mark.large { width: 66px; height: 66px; border-radius: 19px; font-size: 30px; }
+.button-primary, .button-secondary { display: inline-flex; align-items: center; justify-content: center; gap: 10px; border-radius: 12px; padding: 14px 20px; font-size: 14px; font-weight: 700; transition: transform .2s, border-color .2s, background .2s; }
+.button-primary { border: 1px solid #4382ff; background: #3678f6; color: white; box-shadow: 0 8px 28px rgba(54,120,246,.2); }
+.button-primary:hover { transform: translateY(-2px); background: #2869e8; }
+.button-secondary { border: 1px solid rgba(255,255,255,.15); background: rgba(255,255,255,.025); color: #e6ebf4; }
+.button-secondary:hover { transform: translateY(-2px); border-color: rgba(100,155,255,.55); background: rgba(255,255,255,.05); }
+.section-wrap { margin-inline: auto; max-width: 80rem; padding: 5.5rem 1.25rem; }
+.section-label { display: inline-flex; align-items: center; gap: 10px; color: #8eb6ff; font-size: 12px; font-weight: 800; letter-spacing: .08em; }
+.service-card, .process-card { min-height: 270px; border: 1px solid rgba(255,255,255,.09); border-radius: 20px; background: linear-gradient(145deg, rgba(255,255,255,.045), rgba(255,255,255,.012)); padding: 24px; transition: transform .25s, border-color .25s, background .25s; }
+.service-card:hover, .process-card:hover { transform: translateY(-4px); border-color: rgba(54,120,246,.4); background: linear-gradient(145deg, rgba(54,120,246,.09), rgba(255,255,255,.015)); }
+.project-card { overflow: hidden; border: 1px solid rgba(255,255,255,.09); border-radius: 22px; background: rgba(255,255,255,.025); transition: transform .25s, border-color .25s; }
+.project-card:hover { transform: translateY(-4px); border-color: rgba(54,120,246,.35); }
+.project-art { position: relative; height: 250px; overflow: hidden; }
+.contact-panel { border: 1px solid rgba(255,255,255,.1); border-radius: 28px; background: radial-gradient(circle at 0% 0%, rgba(54,120,246,.12), transparent 45%), linear-gradient(135deg, #0d1422, #090e18); }
+.form-label { display: flex; flex-direction: column; gap: 9px; color: #d5ddeb; font-size: 13px; font-weight: 600; }
+.form-input { width: 100%; border: 1px solid rgba(255,255,255,.12); border-radius: 12px; background: rgba(4,8,16,.55); padding: 13px 14px; color: #f5f7fb; outline: none; transition: border-color .2s, box-shadow .2s; }
+.form-input::placeholder { color: #637087; }
+.form-input:focus { border-color: rgba(79,139,255,.8); box-shadow: 0 0 0 3px rgba(54,120,246,.12); }
+.form-input option { background: #0d1422; color: white; }
+
+@media (min-width: 640px) { .section-wrap { padding-inline: 2rem; } }
+@media (min-width: 1024px) { .section-wrap { padding-inline: 3rem; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; } }
